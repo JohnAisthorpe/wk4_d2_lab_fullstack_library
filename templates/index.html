@@ -10,9 +10,12 @@
     
     {% for book in all_books %}
 
-        {{ book.title }} - {{ book.author.name }}
+        Book: {{ book.title }} <br><br>
+        Author: {{ book.author.name }} <br><br><br>
         
-
+        <form action="/books/{{ book.id }}/delete" method="post">
+        <input type="submit" value="Delete Book">
+        </form>
     {% endfor %}
 
 
